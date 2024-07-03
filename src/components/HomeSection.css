@@ -1,0 +1,232 @@
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  color: white;
+  text-align: left;
+  position: relative;
+  background-color: #ffffff; /* Задаем фоновый цвет для контраста */
+}
+
+.home-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.text-and-flags {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2em;
+  flex-wrap: wrap; 
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #be9439;
+}
+
+.text-content p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #be9439;
+}
+
+.flags-and-export {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flags {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.flags img {
+  width: 70px;
+  height: auto;
+}
+
+.export-text {
+  text-align: center;
+  font-size: 1.2em;
+  color: #be9439;
+}
+
+.btn.btn-primary.tre {
+  background-color: #be9439;
+  color: rgb(255, 255, 255);
+  border: solid 2px #be9439;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn.btn-primary.tre:hover {
+  background-color: #ffffff;
+  border: solid 2px #be9439;
+  color: #be9439;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 1em;
+  margin-top: 80px;
+}
+
+.image-card {
+  position: relative;
+  width: 100%;
+  max-width: 30%; /* Уменьшено для лучшей адаптивности */
+  height: 350px;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-card:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .text-content h1 {
+    font-size: 1.5em;
+  }
+
+  .text-content p {
+    font-size: 1em;
+  }
+
+  .btn.btn-primary.tre {
+    font-size: 0.9em;
+    padding: 0.6em 1.2em;
+  }
+
+  .text-and-flags {
+    flex-direction: column;
+  }
+
+  .image-grid {
+    flex-direction: column;
+  }
+
+  .image-card {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .grid_2_col {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 1em;
+  }
+
+  p.text_export {
+    width: 90%;
+  }
+}
+
+.craftStone {
+  font-size: 28px;
+  color: #be9439;
+  font-weight: bold;
+}
+
+p.text_export {
+  width: 500px;
+  color: #121211;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.grid_2_col {
+  display: grid;
+  grid-template-columns: 490px 400px;
+  column-gap: 120px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+
+p.gridFlagTxt {
+  width: 400px;
+}
+
+@media (max-width: 480px) {
+  .text-content h1 {
+    font-size: 1.2em;
+  }
+
+  .text-content p {
+    font-size: 0.9em;
+  }
+
+  .btn.btn-primary.tre {
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+  }
+
+  .grid_2_col {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 1em;
+  }
+
+  p.text_export {
+    width: 90%;
+  }
+
+  .image-card {
+    max-width: 100%;
+    height: auto;
+  }
+}

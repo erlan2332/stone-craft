@@ -1,0 +1,129 @@
+.header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  position: fixed; /* Фиксируем навбар на экране */
+  width: 100%; /* Ширина на весь экран */
+  top: 0;
+  z-index: 1000; /* Размещаем навбар на переднем плане */
+}
+
+.nav_2 {
+  background-color: white;
+  border-radius: 50px;
+  padding: 1em 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Увеличена ширина */
+  transition: width 0.3s ease;
+}
+
+.nav-links_2 {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-item_2 {
+  margin: 0 1.5em;
+}
+
+.nav-link_2 {
+  text-decoration: none;
+  color: #be9439;
+  font-weight: 500;
+  font-size: 1.2em;
+  padding: 0.5em 1.5em;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 25px;
+}
+
+.nav-link_2.active_2 {
+  background-color: #be9439;
+  color: rgb(255, 255, 255);
+}
+
+.nav-link_2:hover {
+  background-color: #c6c6c6;
+}
+
+.contact-button_2 {
+  background-color: #be9439;
+  color: #c6c6c6;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: none; /* Скрываем кнопку по умолчанию */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .nav_2 {
+    padding: 1em 4em;
+    width: 90%;
+  }
+
+  .nav-links_2 {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links_2.open {
+    display: flex;
+  }
+
+  .nav-item_2 {
+    margin: 0.5em 0;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+
+  .bar.open {
+    transform: rotate(45deg);
+  }
+
+  .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar.open:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .contact-button {
+    display: block; /* Отображаем кнопку в мобильной версии */
+    margin-left: auto; /* Размещаем кнопку справа */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav_2 {
+    padding: 1em 2em;
+    width: 95%;
+  }
+
+  .nav-link_2 {
+    font-size: 1em;
+    padding: 0.5em 1.2em;
+  }
+}

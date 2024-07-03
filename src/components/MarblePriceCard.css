@@ -1,0 +1,80 @@
+.marble-price-card {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 1em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+  }
+  
+  .marble-price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .marble-price-card-header {
+    padding: 1.5em;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Добавляем полупрозрачный фон для читаемости текста */
+  }
+  
+  .marble-price-card-header h2 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .marble-price-card-header .price {
+    font-size: 2.5em;
+    margin: 0.5em 0 0;
+  }
+  
+  .marble-price-card-body {
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.8); /* Добавляем белый полупрозрачный фон */
+    color: #333;
+  }
+  
+  .features {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    color: #666;
+    text-align: left;
+  }
+  
+  .features li {
+    margin-bottom: 0.5em;
+  }
+  
+  .features .included {
+    color: #be9439;
+  }
+  
+  .features .not-included {
+    color: #be9439;
+  }
+  
+  .select-button {
+    background-color: #be9439;
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 1em;
+  }
+  
+  .select-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+    color: #be9439;
+    border: solid 1px #be9439;
+  }
+  
