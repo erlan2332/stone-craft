@@ -10,7 +10,7 @@ function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('https://marble-tile-factory-server-pwrc2om3m-erlans-projects-7dfeb46c.vercel.app/api/send-template-message', { phone, appointmentDate })
+    axios.post('https://zavod-marble.onrender.com/send-template-message', { phone, appointmentDate })
       .then(response => {
         if (response.data.success) {
           setMessage('Сообщение успешно отправлено!');
