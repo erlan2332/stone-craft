@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/stone-craft/static/css/main.0b7d1e5e.css",
-    "main.js": "/stone-craft/static/js/main.8802f462.js",
+    "main.css": "/stone-craft/static/css/main.7390492d.css",
+    "main.js": "/stone-craft/static/js/main.8a3206ea.js",
     "static/js/453.3859d885.chunk.js": "/stone-craft/static/js/453.3859d885.chunk.js",
     "static/media/photo_bg1.jpg": "/stone-craft/static/media/photo_bg1.c3aebbc071d0f123e808.jpg",
     "static/media/photo_bg3.jpg": "/stone-craft/static/media/photo_bg3.456e992a8c4b98b894e5.jpg",
     "static/media/photo_bg2.jpg": "/stone-craft/static/media/photo_bg2.ad48a9db825fdc21cd7c.jpg",
+    "static/media/postCraft.png": "/stone-craft/static/media/postCraft.5f3e6a5906d04adec1b7.png",
     "static/media/Flag_of_Kazakhstan.svg.png": "/stone-craft/static/media/Flag_of_Kazakhstan.svg.d73896f16e67bd6f649f.png",
     "static/media/Flag_of_Kyrgyzstan_(1992-2023).png": "/stone-craft/static/media/Flag_of_Kyrgyzstan_(1992-2023).6c37c6f2a1d2d6c026c0.png",
     "index.html": "/stone-craft/index.html",
     "static/media/illustration-of-russia-flag_53876-27016.avif": "/stone-craft/static/media/illustration-of-russia-flag_53876-27016.c193f8e93eb2cce8065b.avif",
-    "main.0b7d1e5e.css.map": "/stone-craft/static/css/main.0b7d1e5e.css.map",
-    "main.8802f462.js.map": "/stone-craft/static/js/main.8802f462.js.map",
+    "main.7390492d.css.map": "/stone-craft/static/css/main.7390492d.css.map",
+    "main.8a3206ea.js.map": "/stone-craft/static/js/main.8a3206ea.js.map",
     "453.3859d885.chunk.js.map": "/stone-craft/static/js/453.3859d885.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b7d1e5e.css",
-    "static/js/main.8802f462.js"
+    "static/css/main.7390492d.css",
+    "static/js/main.8a3206ea.js"
   ]
 }
