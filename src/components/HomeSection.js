@@ -10,6 +10,7 @@ import kazakhstanFlag from './flag/Flag_of_Kazakhstan.svg.png';
 import uzbekistanFlag from './flag/images.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import logo from './assets/postCraft.png'
 
 function HomeSection() {
   const [phone, setPhone] = useState('');
@@ -19,7 +20,7 @@ function HomeSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:5001/send-template-message', { phone, appointmentDate })
+    axios.post('https://zavod-marble.onrender.com/send-template-message', { phone, appointmentDate })
       .then(response => {
         if (response.data.success) {
           setMessage('Сообщение успешно отправлено!');
@@ -41,11 +42,11 @@ function HomeSection() {
       <div className="home-content">
         <div className="text-and-button">
           <div className="text-content">
-            <h3 className='craftStone'>Craft stone</h3>
             <div className='grid_2_col'>
               <div>
+              <div className='craftStone'><img className='logoPng' src={logo} /></div>
                 <p className='text_export'>
-                  Компания Stone Craft, расположенная в городе Джалал-Абад, Кыргызстан, специализируется на производстве высококачественных мраморных плиток и травертина. Мы предлагаем как частным лицам, так и крупным компаниям широкий выбор продукции для строительства и отделки.
+                  Компания Craft Stone, расположенная в городе Джалал-Абад, Кыргызстан, специализируется на производстве высококачественных мраморных плиток и травертина. Мы предлагаем как частным лицам, так и крупным компаниям широкий выбор продукции для строительства и отделки.
                 </p>
               </div>
               <div>

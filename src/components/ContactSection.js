@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './ContactSection.css';
+import logo from './assets/postCraft.png'; // Добавьте путь к вашему логотипу
 
 function ContactSection() {
   const [phone, setPhone] = useState('');
@@ -28,10 +29,13 @@ function ContactSection() {
     <section id="contact" className="contact-section">
       <div className="contact-content">
         <div className="contact-info">
-          <h4 className='header_contacts'>Наши контакты</h4>
+          <h4 className="header_contacts">Наши контакты</h4>
           <p>Если у вас есть какие-либо вопросы или вам нужна дополнительная информация, пожалуйста, не стесняйтесь обращаться к нам:</p>
           <p><strong>Телефон:</strong> +996 773 003 260</p>
           <p><strong>Адресс:</strong> Г. Джалал-Абад ул. Мамыра Баатыра 87</p>
+          <div className="logo-container">
+            <img src={logo} alt="Company Logo" className="contact-logo" />
+          </div>
         </div>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">

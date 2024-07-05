@@ -26,6 +26,7 @@
   width: 300px;
   padding: 2em;
   text-align: left;
+  position: relative; /* Добавлено для позиционирования логотипа */
 }
 
 .heaeder_craft {
@@ -53,4 +54,12 @@
 .product-card p {
   font-size: 1em;
   color: #666;
+}
+
+.company-logo {
+  position: absolute; /* Позиционирование логотипа */
+  top: 10px; /* Настройте по своему вкусу */
+  right: 10px; /* Настройте по своему вкусу */
+  width: 50px; /* Размер логотипа */
+  height: auto;
 }

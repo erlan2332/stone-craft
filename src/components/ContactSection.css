@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 280px;
   background-color: #ffffff;
   padding: 50px 0;
   margin-bottom: 80px;
@@ -29,6 +28,9 @@
 
 .contact-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-info p {
@@ -93,6 +95,18 @@
   text-align: center;
 }
 
+.logo-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-logo {
+  width: 60%;
+  height: auto;
+  position: relative;
+  right: 115px;
+}
+
 @media (max-width: 768px) {
   .contact-section {
     height: auto;
@@ -107,6 +121,13 @@
   .contact-info, .contact-form {
     flex: none;
     width: 100%;
+  }
+
+  .contact-logo {
+    width: 100%;
+    height: auto;
+    position: relative;
+    right: 0px;
   }
 
   .header_contacts {
