@@ -2,7 +2,7 @@
   "name": "marble-tile-factory",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://erlan2332.github.io/stone-craft",
+  "homepage": "https://craft-stone.com",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
