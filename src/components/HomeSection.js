@@ -59,7 +59,7 @@ function HomeSection() {
                 <p className='gridFlagTxt'>
                   Мы экспортируем нашу продукцию в страны СНГ, обеспечивая надежную и быструю доставку. Частные лица могут приобретать нашу продукцию для строительства собственного дома, а строительные компании могут заказывать большие партии для крупных проектов.
                 </p>
-                <button className="btn btn-primary tre" data-bs-toggle="modal" data-bs-target="#contactModal">Связаться с нами</button>
+                <button className="btn btn-primary tre" data-bs-toggle="modal" data-bs-target="#contactModal">Заказать</button>
               </div>
             </div>
           </div>
