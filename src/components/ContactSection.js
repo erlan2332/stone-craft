@@ -1,28 +1,29 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import './ContactSection.css';
-import logo from './assets/postCraft.png'; // Добавьте путь к вашему логотипу
 
 function ContactSection() {
   const [phone, setPhone] = useState('');
-  const [appointmentDate, setAppointmentDate] = useState('');
+  const [messageText, setMessageText] = useState('');
   const [message, setMessage] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const handleMessageTextChange = (e) => {
+    setMessageText(e.target.value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setMessage('Отправка данных...');
+    setIsModalOpen(true);
 
-    axios.post('https://zavod-marble.onrender.com/send-template-message', { phone, appointmentDate })
-      .then(response => {
-        if (response.data.success) {
-          setMessage('Сообщение успешно отправлено!');
-        } else {
-          setMessage('Не удалось отправить сообщение.');
-        }
-      })
-      .catch(error => {
-        console.error('Ошибка при отправке сообщения!', error);
-        setMessage('Не удалось отправить сообщение.');
-      });
+    // Имитация отправки данных
+    setTimeout(() => {
+      setMessage('Данные отправлены! С вами свяжутся.');
+    }, 1000);
   };
 
   return (
@@ -32,10 +33,7 @@ function ContactSection() {
           <h4 className="header_contacts">Наши контакты</h4>
           <p>Если у вас есть какие-либо вопросы или вам нужна дополнительная информация, пожалуйста, не стесняйтесь обращаться к нам:</p>
           <p><strong>Телефон:</strong> +996 773 003 260</p>
-          <p><strong>Адресс:</strong> Г. Джалал-Абад ул. Мамыра Баатыра 87</p>
-          <div className="logo-container">
-            <img src={logo} alt="Company Logo" className="contact-logo" />
-          </div>
+          <p><strong>Адрес:</strong> Г. Джалал-Абад ул. Мамыра Баатыра 87</p>
         </div>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
@@ -44,26 +42,34 @@ function ContactSection() {
               type="tel"
               id="phone"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={handlePhoneChange}
               required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="appointmentDate">Ваше сообщение:</label>
+            <label htmlFor="messageText">Ваше сообщение:</label>
             <input
               type="text"
-              id="appointmentDate"
-              value={appointmentDate}
-              onChange={(e) => setAppointmentDate(e.target.value)}
+              id="messageText"
+              value={messageText}
+              onChange={handleMessageTextChange}
               required
             />
           </div>
           <button type="submit" className="contact-button">Отправить</button>
         </form>
-        {message && <p className="message">{message}</p>}
       </div>
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <p>{message}</p>
+            <button onClick={() => setIsModalOpen(false)}>Закрыть</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
 
 export default ContactSection;
+
